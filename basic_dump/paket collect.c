@@ -69,7 +69,7 @@ int main()
 	
 	if(i==0)
 	{
-		printf("\nÀåÄ¡°¡ ¾ø´Ù?\n");
+		printf("\nÃ€Ã¥Ã„Â¡Â°Â¡ Â¾Ã¸Â´Ã™?\n");
 		return -1;
 	}
 	
@@ -89,12 +89,12 @@ int main()
 	for(d=alldevs, i=0; i< inum-1 ;d=d->next, i++);
 	
 	
-	if ((adhandle= pcap_open_live(d->name,	// name of the device
-							 65536,			// portion of the packet to capture. 
-											// 65536 grants that the whole packet will be captured on all the MACs.
-							 1,				// promiscuous mode (nonzero means promiscuous)
-							 1000,			// read timeout
-							 errbuf			// error buffer
+	if ((adhandle= pcap_open_live(d->name,
+							 65536,			
+											
+							 1,				
+							 1000,			
+							 errbuf		
 							 )) == NULL)
 	{
 		fprintf(stderr,"\nUnable to open the adapter. %s is not supported by Npcap\n", d->name);
